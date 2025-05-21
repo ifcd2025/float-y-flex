@@ -47,6 +47,23 @@
         .contenedor12 {
             justify-content: space-evenly;
         }
+        .contenedor13 {
+            flex-direction: column;
+            justify-content: center;
+            height: 200px; /* Ya que si no no se notaría el 
+            centrado vertical */
+        }
+        .contenedor14 {
+            align-items: end; /* Se refiere al eje transversal, que 
+            en el caso de dirección row, es el vertical */
+            height: 200px; /* Ya que si no no se notaría la 
+            propiedad align-items */
+        }
+        .contenedor15 {
+            align-items: center;
+            height: 200px;
+            justify-content: center;
+        }
         .caja {
             border: solid;
         }
@@ -117,29 +134,50 @@
         <div class="caja2 caja">Lorem ipsum</div>
         <div class="caja3 caja">Lorem ipsum</div>
     </div>
-    <p>flex con dirección column-reverse</p>
+    <p>flex con dirección fila y alineados al final</p>
     <div class="contenedor contenedor9">
         <div class="caja1 caja">Lorem ipsum</div>
         <div class="caja2 caja">Lorem ipsum</div>
         <div class="caja3 caja">Lorem ipsum</div>
     </div>
-    <p>flex con dirección column-reverse</p>
+    <p>flex con dirección fila y el mismo espacio entre columnas pero
+        sin espacio en las esquinas (space-between)
+    </p>
     <div class="contenedor contenedor10">
         <div class="caja1 caja">Lorem ipsum</div>
         <div class="caja2 caja">Lorem ipsum</div>
         <div class="caja3 caja">Lorem ipsum</div>
     </div>
-    <p>flex con dirección column-reverse</p>
+    <p>flex con dirección fila y el mismo espacio entre elementos pero
+        menos espacio en las esquinas (space-around)
+    </p>
     <div class="contenedor contenedor11">
         <div class="caja1 caja">Lorem ipsum</div>
         <div class="caja2 caja">Lorem ipsum</div>
         <div class="caja3 caja">Lorem ipsum</div>
     </div>    
-    <p>flex con dirección column-reverse</p>
+    <p>flex con dirección fila y el mismo espacio en todos los 
+        lados (space-evenly)
+    </p>
     <div class="contenedor contenedor12">
         <div class="caja1 caja">Lorem ipsum</div>
         <div class="caja2 caja">Lorem ipsum</div>
         <div class="caja3 caja">Lorem ipsum</div>
-    </div>  
+    </div> 
+    <p>flex con dirección column y centrados verticalmente
+    </p>
+    <div class="contenedor contenedor13">
+        <div class="caja1 caja">Lorem ipsum</div>
+        <div class="caja2 caja">Lorem ipsum</div>
+        <div class="caja3 caja">Lorem ipsum</div>
+    </div>   
+        <p>flex con dirección column y centrados verticalmente
+    </p>
+    <div class="contenedor contenedor14">
+        <div class="caja1 caja">Lorem ipsum</div>
+        <div class="caja2 caja">Lorem ipsum</div>
+        <div class="caja3 caja">Lorem ipsum</div>
+    </div>   
+
 </body>
 </html>
