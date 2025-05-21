@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo</title>
+    <style>
+        /* Cuando ponemos elemenos a flotar dejan de estar dentro
+        de su contenedor, con lo que hay que usar una clase
+        clearfix en el contenedor para solucionarlo ya que si no
+        el contenedor no tendría alto*/
+        .clearfix::after {
+            content: ""; 
+            clear: both;
+            display: table;
+        } 
+        .contenedor {
+            border: solid;
+        }
+        .caja {
+            border: solid;
+            float: left;
+            width: 40%;
+        }
+        .caja1 {
+            background-color: dodgerblue;
+        }
+        .caja2 {
+            background-color: rgb(228, 79, 79);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="contenedor clearfix">
+        <div class="caja1 caja">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum reiciendis accusantium ab eaque voluptatem quia nulla vero quos provident iure?</div>
+        <div class="caja2 caja">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci alias quod saepe tempore porro, dolores veniam? Ipsum doloremque at reprehenderit deserunt dolorum iste sunt temporibus. Reprehenderit ut aut aperiam laudantium.</div>
+    </div>
+</body>
+</html>
