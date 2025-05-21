@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo</title>
+    <style>
+        .contenedor {
+            border:solid;
+            display: flex;
+            margin-bottom: 20px;
+        }
+        .caja {
+            border: solid;
+            /* Con estas dos le damos el mismo ancho a todas las
+            cajas */
+            flex-basis:0; /* Tamaño mínimo 0 */
+            flex-grow: 1; /* Que crezca la caja si hay sitio libre */
+        }
+        .caja1 {
+            background-color: dodgerblue;
+        }
+        .caja2 {
+            background-color: rgb(228, 79, 79);
+        }
+        .caja3 {
+            background-color: rgb(4, 147, 121);
+        }
+        .otraCaja {
+            border: solid;
+        }
+        .otraCaja:first-of-type {
+            flex-grow: 1; /* Por defecto las cajas no crecen si hay espacio
+            libre ya que si flex-grow es cero. Dando otro valor crecen en
+            ese espacio libre */
+        }
+    </style>
+</head>
+<body>
+    <p>Todas las cajas con el mismo ancho. También el alto ya que por
+        defecto align-items tiene el valor stretch 
+    </p>
+    <div class="contenedor">
+        <div class="caja1 caja">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt, aperiam.</div>
+        <div class="caja2 caja">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, aliquid. Quis sed vitae quos consequuntur eum natus tempore odit hic!</div>
+        <div class="caja3 caja">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia architecto ab labore harum repellat iusto necessitatibus adipisci assumenda, totam eligendi in quibusdam facilis culpa suscipit? Quas nobis accusantium, vel eos suscipit rem, ipsa quia deserunt repellendus quisquam laudantium dolores praesentium.</div>
+    </div>
+        <p>La primera caja ocupa todo el espacio libre (flex-grow)
+    </p>
+    <div class="contenedor">
+        <div class="caja1 otraCaja">Lorem ipsum dolor</div>
+        <div class="caja2 otraCaja">Lorem ipsum dolor</div>
+        <div class="caja3 otraCaja">Lorem ipsum dolor</div>
+    </div>
+</body>
+</html>

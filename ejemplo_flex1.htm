@@ -59,7 +59,7 @@
             height: 200px; /* Ya que si no no se notaría la 
             propiedad align-items */
         }
-        .contenedor15 {
+        .contenedor15, .contenedor16 {
             align-items: center;
             height: 200px;
             justify-content: center;
@@ -82,6 +82,10 @@
             de order en una caja, la podemos colocar en otra posición.
             Con -1 la ponemos delante de todas*/
             order: -1;
+        }
+        .cajaArriba {
+            /* Para alinear un elemento diferente del resto */
+            align-self: flex-start;
         }
     </style>
 </head>
@@ -178,6 +182,22 @@
         <div class="caja2 caja">Lorem ipsum</div>
         <div class="caja3 caja">Lorem ipsum</div>
     </div>   
+    <p>flex con dirección row y centrados horizontal y 
+    verticalmente
+    </p>
+    <div class="contenedor contenedor15">
+        <div class="caja1 caja">Lorem ipsum</div>
+        <div class="caja2 caja">Lorem ipsum</div>
+        <div class="caja3 caja">Lorem ipsum</div>
+    </div>  
+      <p>flex con dirección row y centrados horizontal y 
+    verticalmente y el elemento 2 alineado arriba (align-self)
+    </p>
+    <div class="contenedor contenedor16">
+        <div class="caja1 caja">Lorem ipsum</div>
+        <div class="caja2 caja cajaArriba">Lorem ipsum</div>
+        <div class="caja3 caja">Lorem ipsum</div>
+    </div>  
 
 </body>
 </html>
