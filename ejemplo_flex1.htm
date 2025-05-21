@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo</title>
+    <style>
+        .contenedor{
+            border: solid;
+            display: flex;
+            margin-bottom: 20px;
+        }
+        .contenedor1 {
+            border-color: red;
+        }
+        .contenedor2 {
+            flex-direction: column;
+        }
+        .contenedor3 {
+            flex-direction: row-reverse;
+        }
+        .contenedor4 {
+            flex-direction: column-reverse;
+        }
+        .contenedor5 {
+            column-gap: 20px; /* Espacio entre columnas */
+        } 
+        .contenedor6 {
+            flex-direction: column;
+            row-gap: 20px; /* Espacio entre filas */
+        } 
+        .contenedor8 {
+            /* Para centrar las cajas, horizontalmente con row y
+            verticalmente con column. Siempre que no ocupen
+            todo el ancho y alto */
+            justify-content: center;
+        }
+        .contenedor9 {
+            justify-content: end;
+        }
+        .contenedor10 {
+            justify-content: space-between;
+        }
+        .contenedor11 {
+            justify-content: space-around;
+        }
+        .contenedor12 {
+            justify-content: space-evenly;
+        }
+        .caja {
+            border: solid;
+        }
+        .caja1 {
+            background-color: dodgerblue;
+        }
+        .caja2 {
+            background-color: rgb(228, 79, 79);
+        }
+        .caja3 {
+            background-color: rgb(4, 147, 121);
+        }
+        .cajaPrimera {
+            /* Por defecto todos los elementos tienen order:0 con lo
+            que se colocan tal como se crean en HTML. Cambiando el valor
+            de order en una caja, la podemos colocar en otra posición.
+            Con -1 la ponemos delante de todas*/
+            order: -1;
+        }
+    </style>
+</head>
+<body>
+    <p>flex con dirección row (fila). Es el valor por defecto</p>
+    <div class="contenedor contenedor1">
+        <div class="caja1 caja">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum reiciendis accusantium ab eaque voluptatem quia nulla vero quos provident iure?</div>
+        <div class="caja2 caja">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci alias quod saepe tempore porro, dolores veniam? Ipsum doloremque at reprehenderit deserunt dolorum iste sunt temporibus. Reprehenderit ut aut aperiam laudantium.</div>
+        <div class="caja3 caja">Lorem ipsum</div>
+    </div>
+    <p>flex con dirección column</p>
+    <div class="contenedor contenedor2">
+        <div class="caja1 caja">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum reiciendis accusantium ab eaque voluptatem quia nulla vero quos provident iure?</div>
+        <div class="caja2 caja">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci alias quod saepe tempore porro, dolores veniam? Ipsum doloremque at reprehenderit deserunt dolorum iste sunt temporibus. Reprehenderit ut aut aperiam laudantium.</div>
+        <div class="caja3 caja">Lorem ipsum</div>
+    </div>
+    <p>flex con dirección row-reverse</p>
+    <div class="contenedor contenedor3">
+        <div class="caja1 caja">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum reiciendis accusantium ab eaque voluptatem quia nulla vero quos provident iure?</div>
+        <div class="caja2 caja">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci alias quod saepe tempore porro, dolores veniam? Ipsum doloremque at reprehenderit deserunt dolorum iste sunt temporibus. Reprehenderit ut aut aperiam laudantium.</div>
+        <div class="caja3 caja">Lorem ipsum</div>
+    </div>
+    <p>flex con dirección column-reverse</p>
+    <div class="contenedor contenedor4">
+        <div class="caja1 caja">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum reiciendis accusantium ab eaque voluptatem quia nulla vero quos provident iure?</div>
+        <div class="caja2 caja">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci alias quod saepe tempore porro, dolores veniam? Ipsum doloremque at reprehenderit deserunt dolorum iste sunt temporibus. Reprehenderit ut aut aperiam laudantium.</div>
+        <div class="caja3 caja">Lorem ipsum</div>
+    </div>
+    <p>flex con dirección row y espacio entre columnas</p>
+    <div class="contenedor contenedor5">
+        <div class="caja1 caja">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum reiciendis accusantium ab eaque voluptatem quia nulla vero quos provident iure?</div>
+        <div class="caja2 caja">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci alias quod saepe tempore porro, dolores veniam? Ipsum doloremque at reprehenderit deserunt dolorum iste sunt temporibus. Reprehenderit ut aut aperiam laudantium.</div>
+        <div class="caja3 caja">Lorem ipsum</div>
+    </div>
+    <p>flex con dirección column-reverse y espacios entre filas</p>
+    <div class="contenedor contenedor6">
+        <div class="caja1 caja">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum reiciendis accusantium ab eaque voluptatem quia nulla vero quos provident iure?</div>
+        <div class="caja2 caja">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci alias quod saepe tempore porro, dolores veniam? Ipsum doloremque at reprehenderit deserunt dolorum iste sunt temporibus. Reprehenderit ut aut aperiam laudantium.</div>
+        <div class="caja3 caja">Lorem ipsum</div>
+    </div>
+    <p>flex con dirección row y la última caja de primera</p>
+    <div class="contenedor contenedor7">
+        <div class="caja1 caja">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum reiciendis accusantium ab eaque voluptatem quia nulla vero quos provident iure?</div>
+        <div class="caja2 caja">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci alias quod saepe tempore porro, dolores veniam? Ipsum doloremque at reprehenderit deserunt dolorum iste sunt temporibus. Reprehenderit ut aut aperiam laudantium.</div>
+        <div class="caja3 caja cajaPrimera">Lorem ipsum</div>
+    </div>
+    <p>flex con dirección row y centrados horizontalmente</p>
+    <div class="contenedor contenedor8">
+        <div class="caja1 caja">Lorem ipsum</div>
+        <div class="caja2 caja">Lorem ipsum</div>
+        <div class="caja3 caja">Lorem ipsum</div>
+    </div>
+    <p>flex con dirección column-reverse</p>
+    <div class="contenedor contenedor9">
+        <div class="caja1 caja">Lorem ipsum</div>
+        <div class="caja2 caja">Lorem ipsum</div>
+        <div class="caja3 caja">Lorem ipsum</div>
+    </div>
+    <p>flex con dirección column-reverse</p>
+    <div class="contenedor contenedor10">
+        <div class="caja1 caja">Lorem ipsum</div>
+        <div class="caja2 caja">Lorem ipsum</div>
+        <div class="caja3 caja">Lorem ipsum</div>
+    </div>
+    <p>flex con dirección column-reverse</p>
+    <div class="contenedor contenedor11">
+        <div class="caja1 caja">Lorem ipsum</div>
+        <div class="caja2 caja">Lorem ipsum</div>
+        <div class="caja3 caja">Lorem ipsum</div>
+    </div>    
+    <p>flex con dirección column-reverse</p>
+    <div class="contenedor contenedor12">
+        <div class="caja1 caja">Lorem ipsum</div>
+        <div class="caja2 caja">Lorem ipsum</div>
+        <div class="caja3 caja">Lorem ipsum</div>
+    </div>  
+</body>
+</html>
